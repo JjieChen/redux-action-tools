@@ -83,12 +83,12 @@ function createAsyncAction(type, payloadCreator, metaCreator) {
         dispatch(
           completeAction(value, getAsyncMeta(metaCreator, value, ASYNC_PHASES.COMPLETED))
         );
-        return value;
+        //return value;
       }, e => {
         dispatch(
           failedAction(e, getAsyncMeta(metaCreator, e, ASYNC_PHASES.FAILED))
         );
-        return Promise.reject(e);
+        //return Promise.reject(e);
       });
     }
   };
